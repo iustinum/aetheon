@@ -1,15 +1,29 @@
 import openai
+from dotenv import load_dotenv
+import os
+import argparse
 
-openai.api_key = "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"
+load_dotenv(".env")
+openai.api_key=os.environ["OPENAI_API_KEY"]
+
+def generateParser() -> argparse.ArgumentParser:
+
+    """
+    A function that creates a parser for our script.
+    """
+
+    # Creates the parser, also gives the parser a description
+    parser = argparse.ArgumentParser(description="A utility for generating wiki pages for a code base.")
+
+    # Adds arguments to the parser, may add more in the future.
+    parser.add_argument("-l", "--link", help="A github repo link to analyze", required=True)
+
+    return parser
 
 if __name__ == "__main__":
-    print("INFO: [*] GENERATING MESSAGE...")
-    res = openai.ChatCompletion.create(
-    model = "gpt-4",
-    messages = [{"role":"user", "content":"tell me more about the ja morant gun controversy."}]
-    )
-    print(res)
 
-
-
-
+    parser = generateParser()
+    inputs = vars(parser.parse_args())
+    link = inputs["link"]
+    print("INFO: [*] Here is the link")
+    print(link)
