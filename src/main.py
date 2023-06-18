@@ -37,6 +37,8 @@ def run_gitlance(author, repo_name, branch, save_dest):
 
     testFile = save_dest
     GPTObject = gpt.GPT(model="gpt-4")
+    if os.path.exists(repo_reader.storeFileName):
+        os.remove(repo_reader.storeFileName)
     # author, repo_name = utils.get_repo_info("https://github.com/Jingzhi-Su/PokerBot") #"https://github.com/chiyeon/tmf-beat")
     # print(author, repo_name)
     repo_reader.generateDataFile(author, repo_name, branch=branch)

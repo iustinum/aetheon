@@ -25,7 +25,6 @@ def generateMarkDown(textInMDFormat : str, outputFile : str) -> None:
 
     generateNewMD(outputFile)
 
-    print("Generated Markdown")
     with open(outputFile, "w") as f:
         f.write(textInMDFormat)
         f.close()
