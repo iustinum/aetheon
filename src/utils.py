@@ -2,6 +2,8 @@ import re
 import requests
 from typing import Optional, Tuple
 
+import time
+
 def get_repo_info(repo_link: str) -> Optional[Tuple[str, str]]:
     # Regular expression pattern to match GitHub repository link
     pattern = r"https://github\.com/([^/]+)/([^/]+)"
@@ -17,12 +19,11 @@ def get_repo_info(repo_link: str) -> Optional[Tuple[str, str]]:
         response = requests.get(api_url, headers=headers)
 
         if response.status_code == 200:
-            repo_info = response.json()
-            author = repo_info['owner']['login']
-            return repo_name, author
+            # repo_info = response.json()
+            # author = repo_info['owner']['login']
+            return owner, repo_name
 
-    return None
-import time
+    raise Exception("Invalid github URL!")
 
 def getCurrentTime() -> str:
 

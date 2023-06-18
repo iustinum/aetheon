@@ -94,7 +94,11 @@ if __name__ == "__main__":
     print(os.getenv("GITHUB_TOKEN"))
     print(os.getenv("OPENAI_API_KEY"))
     openai.api_key=os.environ["OPENAI_API_KEY"]
-
-    generateDataFile("CompVis", "stable-diffusion")
+    #paste url:
+    author, repo_name = utils.get_repo_info("https://github.com/elsonli/cs61b-gitlet") #"https://github.com/chiyeon/tmf-beat")
+    print(author, repo_name)
+    generateDataFile(author, repo_name, branch="master")
     print(generateQuery("What is this repository doing?"))
+    os.remove(storeFileName)
+
     
