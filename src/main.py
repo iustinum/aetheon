@@ -2,12 +2,14 @@ import argparse
 import sys
 from dotenv import load_dotenv
 import os
+import wiki
 
 import openai
 import nest_asyncio
 
 import utils
-from repo_reader import generateFileNames, generateQuery 
+import repo_reader
+import gpt
 
 # CLI Interface
 def generateParser() -> argparse.ArgumentParser:
@@ -31,6 +33,23 @@ def run_gitlance(author, repo_name, branch, save_dest):
 
     # TODO: Use link and Branch to run the neccessary code
 
+    utils.setup()
+
+    testFile = save_dest
+    GPTObject = gpt.GPT(model="gpt-4")
+    # author, repo_name = utils.get_repo_info("https://github.com/Jingzhi-Su/PokerBot") #"https://github.com/chiyeon/tmf-beat")
+    # print(author, repo_name)
+    repo_reader.generateDataFile(author, repo_name, branch=branch)
+    print("INFO: [*] Generated file data")
+    allNames = repo_reader.generateFileNames()
+    desc = repo_reader.generateDescriptions(allNames)
+    print("INFO: [*] Generated descriptions")
+    GPTObject.giveContext(desc)
+    print("INFO: [*] Generating Text")
+    text = GPTObject.createMDText(gpt.GPT.query)
+    wiki.generateMarkDown(text, testFile)
+    print("INFO: [*] DONE!")
+
     # generateDataFile(author, repo_name, branch="master")
     # query = generateQuery("Tell me what is inside the Permutation.java file, including a description for what every function is doing.")
     # print(query)
@@ -53,7 +72,7 @@ if __name__ == "__main__":
         link = input("Please provide a github repository link: ")
         author, repo_name = utils.get_repo_info(link)
         if (not author) or (not repo_name):
-            print("Please provide a valid repository!")
+            print("INFO: [*] Please provide a valid repository!")
 
 
     # Prompt to get branch name
@@ -69,7 +88,7 @@ if __name__ == "__main__":
     while not save_dest:
         save_dest = input("Please provide the folder where you would like the wiki output to be saved: ")
         if not save_dest:
-            print("Please provide a file destination!")
+            print("INFO: [*] Please provide a file destination!")
 
 
     print(f"Using the repository {link} on the branch '{branch}'")
@@ -80,8 +99,6 @@ if __name__ == "__main__":
 
     if cont == None or cont == "Y" or cont == "y":
         run_gitlance(author, repo_name, branch, save_dest)
-        sys.exit("Finished wiki creation.")
+        sys.exit("INFO: [*] Finished wiki creation.")
     else:
-        sys.exit("Canceling run ..")
-
-
+        sys.exit("INFO: [*] Canceling run ..")

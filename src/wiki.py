@@ -1,6 +1,8 @@
-import openai 
 import os
 import repo_reader
+import gpt
+import utils
+
 
 def generateNewMD(outputFile : str) -> None:
 
@@ -23,12 +25,27 @@ def generateMarkDown(textInMDFormat : str, outputFile : str) -> None:
 
     generateNewMD(outputFile)
 
+    print("Generated Markdown")
     with open(outputFile, "w") as f:
         f.write(textInMDFormat)
         f.close()
 
 if __name__ == "__main__":
 
-    os.remove("test.md")
-    test = "## Hello World"
-    generateMarkDown(test, "test.md")
+    utils.setup()
+
+    testFile = "test2.md"
+    GPTObject = gpt.GPT(model="gpt-4")
+    author, repo_name = utils.get_repo_info("https://github.com/Jingzhi-Su/PokerBot") #"https://github.com/chiyeon/tmf-beat")
+    print(author, repo_name)
+    repo_reader.generateDataFile(author, repo_name, branch="main")
+    print("INFO: [*] Generated file data")
+    allNames = repo_reader.generateFileNames()
+    desc = repo_reader.generateDescriptions(allNames)
+    print("INFO: [*] Generated descriptions")
+    GPTObject.giveContext(desc)
+    print("INFO: [*] Generating Text")
+    text = GPTObject.createMDText(gpt.GPT.query)
+    print(text)
+    generateMarkDown(text, testFile)
+    print("INFO: [*] DONE!")

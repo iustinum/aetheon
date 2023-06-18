@@ -29,13 +29,11 @@ class GPT():
         """
         Generates a string, in markdown syntax, from the context (codebase).
         """
-
-        print(self.context)
         messages = [
                     {"role" : "user", "content": f"{GPT.contextPrefix} {self.context}. {query}"}]
         res = openai.ChatCompletion.create(model=self.model, messages=messages)
 
-        return res["chocies"][0]["message"]["content"]
+        return res["choices"][0]["message"]["content"]
     
 
 

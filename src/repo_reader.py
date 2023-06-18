@@ -127,7 +127,6 @@ def getDataPKL() -> list[Document]:
         data = pickle.load(f)
         return data
 
-
 # (DEBUGGING)
 if __name__ == "__main__":
     print(os.getenv("GITHUB_TOKEN"))
