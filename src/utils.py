@@ -23,7 +23,7 @@ def get_repo_info(repo_link: str) -> Optional[Tuple[str, str]]:
             # author = repo_info['owner']['login']
             return owner, repo_name
 
-    raise Exception("Invalid github URL!")
+    return None, None
 
 def getCurrentTime() -> str:
 
