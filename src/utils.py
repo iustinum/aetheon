@@ -1,5 +1,9 @@
 import re
 import requests
+import openai
+import os
+from dotenv import load_dotenv
+import nest_asyncio
 from typing import Optional, Tuple
 
 import time
@@ -34,3 +38,16 @@ def getCurrentTime() -> str:
     t = time.localtime()
     current_time = time.strftime("%H:%M:%S", t)
     return current_time
+
+def setup():
+    # keys
+    load_dotenv(".env")
+    openai.api_key=os.environ["OPENAI_API_KEY"]
+
+    # async stuff ??
+    nest_asyncio.apply()
+
+def print_verbose(message: str, enabled: int):
+    if enabled > 0:
+        print(message)
+
