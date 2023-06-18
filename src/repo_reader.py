@@ -76,6 +76,15 @@ def generateFileNames() -> set:
         locations.add(document.extra_info)
     return locations
 
+def generateResponseFromFile(fileName : str) -> str:
+
+    """
+    A function to generate a detailed description for a certain file.
+    This is mainly used to produce descripts for the wikipedia page.
+    """
+
+    return generateQuery(f"Write me a detailed description of the following file or class: {fileName}. The response should include a detailed list of variables and functions.")
+
 def getDataPKL() -> list[Document]:
 
     """
