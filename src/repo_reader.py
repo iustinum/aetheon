@@ -95,10 +95,8 @@ if __name__ == "__main__":
     print(os.getenv("OPENAI_API_KEY"))
     openai.api_key=os.environ["OPENAI_API_KEY"]
     #paste url:
-    author, repo_name = utils.get_repo_info("https://github.com/elsonli/cs61b-gitlet") #"https://github.com/chiyeon/tmf-beat")
+    author, repo_name = utils.get_repo_info("https://github.com/ziyicui2022/cs61b-enigma") #"https://github.com/chiyeon/tmf-beat")
     print(author, repo_name)
     generateDataFile(author, repo_name, branch="master")
-    print(generateQuery("What is this repository doing?"))
+    print(generateQuery("Tell me what is inside the Permutation.java file, including a description for what every function is doing."))
     os.remove(storeFileName)
-
-    
