@@ -2,9 +2,11 @@ import openai
 from dotenv import load_dotenv
 import os
 import argparse
+import nest_asyncio
 
 load_dotenv(".env")
 openai.api_key=os.environ["OPENAI_API_KEY"]
+
 
 def generateParser() -> argparse.ArgumentParser:
 
@@ -21,7 +23,6 @@ def generateParser() -> argparse.ArgumentParser:
     return parser
 
 if __name__ == "__main__":
-
     parser = generateParser()
     inputs = vars(parser.parse_args())
     link = inputs["link"]
