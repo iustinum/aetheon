@@ -29,6 +29,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"svelte-select": "^5.6.1"
+		"svelte-select": "^5.6.1",
+		"tailwindcss": "^3.3.2"
 	}
 }

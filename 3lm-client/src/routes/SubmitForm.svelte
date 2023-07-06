@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	import Select from 'svelte-select';
 
 	let selectedOption = '';
@@ -58,4 +58,4 @@
 		flex-grow: 1;
 		margin-left: 10px;
 	}
-</style>
+</style> -->
