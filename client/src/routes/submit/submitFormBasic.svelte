@@ -1,27 +1,45 @@
 <script>
-  // @ts-ignore
-  function handleSubmit(e) {
-    console.log(e);
-  }
+  let githubLink = '';
+  let branch = '';
+
+  export let onSubmit = () => {};
+
+  $: result = {
+    githubLink,
+    branch
+  };
+
+  const validateAndSubmit = () => {
+    onSubmit(result);
+  };
 </script>
 
 <form action="post">
-  <label for="github-link">
-    <input
-      class="border rounded"
-      type="text"
-      id="github-link"
-      placeholder="https://github.com/username/repositoryname"
-    />
-  </label>
+  <input
+    class="border rounded"
+    type="text"
+    id="github-link"
+    bind:value={githubLink}
+    placeholder="https://github.com/username/repositoryname"
+  />
 
-  <label for="branch">
-    <select class="border rounded" name="branch" id="branch">
-      <option>main</option>
-      <option>deez</option>
-      <option>test</option>
-    </select>
-  </label>
+  <select class="border rounded" name="branch" id="branch" bind:value={branch}>
+    <option>main</option>
+    <option>deez</option>
+    <option>test</option>
+  </select>
 
-  <button class="bg-gray-700 hover:bg-gray-500 text-white rounded" type="button"> Submit </button>
+  <button
+    class="bg-gray-700 hover:bg-gray-500 text-white rounded"
+    type="button"
+    on:click={validateAndSubmit}
+  >
+    Submit
+  </button>
 </form>
+
+<div>
+  <pre>
+    {JSON.stringify(result, null, 2)}
+  </pre>
+</div>

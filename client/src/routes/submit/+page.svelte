@@ -1,6 +1,9 @@
 <script>
   import SubmitFormBasic from './submitFormBasic.svelte';
-  // import SubmitForm from './submitForm.svelte';
+
+  const handleSubmit = (result) => {
+    console.log('HELLO FROM +PAGE', result);
+  };
 </script>
 
 <div class="content-container">
@@ -8,6 +11,5 @@
 </div>
 
 <div class="content-container">
-  <SubmitFormBasic />
-  <!-- <SubmitForm /> -->
+  <SubmitFormBasic onSubmit={handleSubmit} />
 </div>
