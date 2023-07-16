@@ -4,7 +4,7 @@ A command line tool for generating a wiki page for Github repositories, powered 
 
 
 ## Demo
-(Insert .gif demo)
+![](https://iustino.com/assets/img/3lm_demo.gif)
 
 ## Install
 
@@ -21,9 +21,6 @@ Run ```pip install -r requirements.txt```
 (dpkg)
 (aur)
 
-## Usage
-
-Too run, use ```gitlance```
 
 
 

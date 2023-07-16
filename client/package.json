@@ -26,6 +26,8 @@
 		"vite": "^4.4.2"
 	},
 	"type": "module",
+	"author": "ThreeLaughingMonks",
+	"license": "ISC",
 	"dependencies": {
 		"firebase": "^10.0.0"
 	}
