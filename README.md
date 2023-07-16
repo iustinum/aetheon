@@ -4,23 +4,15 @@ A command line tool for generating a wiki page for Github repositories, powered 
 
 
 ## Demo
-![](https://iustino.com/assets/img/3lm_demo.gif)
+<!-- ![](3lm_demo.gif) -->
+<img src="3lm_demo.gif" alt="drawing" width="500"/>
+
 
 ## Install
 
 ### For Development
-Run ```pip install -r requirements.txt```
-
-### If you are using Mac
-
-(Use brew install)
+Run `.hackathon/`, run `pip install -r requirements.txt`, then run the main script: `.hackathon/src/main.py`
 
 
-### If you are using Linux
-(Use apt get)
-(dpkg)
-(aur)
-
-
-
+*Note: old readme for hackathon*
 
