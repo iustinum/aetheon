@@ -1,13 +1,13 @@
 <script>
   import SubmitFormBasic from './submitFormBasic.svelte';
 
-  const handleSubmit = (result) => {
+  const handleSubmit = (/** @type {{ githubLink: string; branch: string; }} */ result) => {
     console.log('HELLO FROM +PAGE', result);
   };
 </script>
 
 <div class="content-container">
-  <h1 class="text-3xl font-bold">Submit Your Repository</h1>
+  <h1>Submit Your Repository</h1>
 </div>
 
 <div class="content-container">

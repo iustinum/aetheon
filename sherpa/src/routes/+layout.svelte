@@ -1,17 +1,20 @@
 <script>
   import '../app.css';
+
+  const options = ['blog', 'q&a', 'waitlist'];
 </script>
 
 <nav class="text-black border">
-  <div class="container mx-auto p-4 flex justify-between items-center max-w-7xl">
+  <div class="container mx-auto p-4 flex justify-between items-center max-w-6xl">
     <a href="." class="text-xl font-bold">3LM</a>
     <ul class="space-x-4">
-      <li class="inline-block"><a href=".">Settings</a></li>
-      <li class="inline-block"><a href=".">Login/User</a></li>
+      {#each options as option (option)}
+        <li class="inline-block"><a href={option}>{option}</a></li>
+      {/each}
     </ul>
   </div>
 </nav>
 
 <div class="main flex items-center flex-col p-10">
-  <slot  />
+  <slot />
 </div>

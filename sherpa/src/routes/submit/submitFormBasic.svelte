@@ -2,7 +2,9 @@
   let githubLink = '';
   let branch = '';
 
-  export let onSubmit = () => {};
+  export let onSubmit = (/** @type {{ githubLink: string; branch: string; }} */ res) => {
+
+  };
 
   $: result = {
     githubLink,
