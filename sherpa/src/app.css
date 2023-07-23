@@ -3,13 +3,29 @@
 @tailwind utilities;
 
 a {
-	@apply hover:text-gray-300;
+  @apply hover:text-gray-300;
 }
 
-.content-container {
-    @apply max-w-2xl w-full p-4 sm:p-6;
+.content-container,
+.content-container-full {
+  @apply w-full p-4 sm:p-6 max-w-2xl;
 }
 
-/* * {
-	outline: solid #ff00f20a 1px;
-} */
+.content-container-full {
+  @apply max-w-5xl;
+}
+
+.main * {
+  @apply my-4;
+}
+
+.url {
+  @apply text-sky-700;
+}
+
+/* DEBUG */
+
+* {
+  background: rgba(255, 58, 58, 0.048);
+  outline: solid #ff00f20a 1px;
+}

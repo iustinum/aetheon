@@ -3,7 +3,7 @@
 </script>
 
 <nav class="text-black border">
-  <div class="container mx-auto p-4 flex justify-between items-center">
+  <div class="container mx-auto p-4 flex justify-between items-center max-w-7xl">
     <a href="." class="text-xl font-bold">3LM</a>
     <ul class="space-x-4">
       <li class="inline-block"><a href=".">Settings</a></li>
@@ -12,9 +12,6 @@
   </div>
 </nav>
 
-<div class="flex items-center flex-col p-10">
-  <slot />
+<div class="main flex items-center flex-col p-10">
+  <slot  />
 </div>
-
-<style>
-</style>
