@@ -1,4 +1,7 @@
-<div class="content-container-full"></div>
+<div class="content-container-full">
+<img src="./static/test.png" alt="asdf">
+  
+</div>
 
 
 <div class="content-container">

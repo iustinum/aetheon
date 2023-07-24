@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Coolvetica";
+    src: url(../public/assets/fonts/coolvetica\ rg.otf);
+    font-style: normal;
+ }
+ 
+ @font-face {
+    font-family: "Coolvetica";
+    src: url(../public/assets/fonts/coolvetica\ rg\ it.otf);
+    font-style: italic;
+ }
+ 
+ @font-face {
+    font-family: "Inter";
+    src: url(../public/assets/fonts/Inter-Regular.ttf);
+    font-weight: normal;
+ }
+ 
+ @font-face {
+    font-family: "Inter";
+    src: url(../public/assets/fonts/Inter-SemiBold.ttf );
+    font-weight: bold;
+ }

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 a {
-  @apply hover:text-gray-300;
+  @apply hover:text-gray-400;
 }
 
 h1 {
@@ -34,6 +34,6 @@ h3 {
 /* DEBUG */
 
 * {
-  background: rgba(255, 58, 58, 0.048);
+  /* background: rgba(255, 58, 58, 0.048); */
   outline: solid #ff00f20a 1px;
 }

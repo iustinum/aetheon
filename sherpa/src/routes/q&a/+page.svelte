@@ -8,11 +8,11 @@
 
 <div class="content-container">
   <h1>q&a !!</h1>
-  <br />
+  <br class="block" />
 
   {#each questions as { q, a }, i (i)}
     <h3 class="">Q: {q}</h3>
     <p>A: {a}</p>
-    <br />
+    <br class="block" />
   {/each}
 </div>
