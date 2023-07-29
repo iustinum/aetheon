@@ -6,7 +6,7 @@
   ];
 </script>
 
-<div class="content-container">
+<div class="content-container text-content">
   <h1>q&a !!</h1>
   <br class="block" />
 

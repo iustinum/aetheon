@@ -2,8 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	font-family: 'Gresa', Helvetica, sans-serif;
+	@apply bg-gray-300 text-gray-800;
+}
+
 a {
 	@apply hover:text-gray-400;
+}
+
+h1,
+h3 {
+	font-family: 'Space Grotesk', sans-serif;
 }
 
 h1 {
@@ -14,26 +24,41 @@ h3 {
 	@apply text-xl;
 }
 
-.content-container,
-.content-container-full {
-	@apply w-full p-4 sm:p-6 max-w-2xl;
+.content-container {
+	@apply w-full p-4 sm:p-6 max-w-3xl;
 }
 
-.content-container-full {
-	@apply max-w-4xl;
+.text-content {
+	@apply md:mt-16 mt-8;
 }
 
-.main * {
-	@apply my-4;
+.content-container > *, .text-content > * {
+	@apply mb-4;
+}
+
+.main > * {
+	@apply p-2;
 }
 
 .url {
-	@apply text-sky-700;
+	@apply text-sky-700 p-0;
+}
+
+#logo-wrapper {
+	position: relative;
+}
+
+#logo {
+	font-family: 'Arial Black', Helvetica, sans-serif;
+	letter-spacing: -3px;
+	/* STRETCHING */
+	display: inline-block;
+	@apply origin-top-left scale-x-150;
 }
 
 /* DEBUG */
 
 * {
 	/* background: rgba(255, 58, 58, 0.048); */
-	outline: solid #ff00f20a 1px;
+	/* outline: solid #ff00f23a 1px; */
 }
