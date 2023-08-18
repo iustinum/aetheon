@@ -1,4 +1,4 @@
-# 3LM (3 Lazy Monks)
+# Aetheon
 
 A command line tool for generating a wiki page for Github repositories, powered by GPT-4 API.
 
