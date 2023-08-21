@@ -109,17 +109,17 @@ def getDataPKL() -> list[Document]:
         return data
 
 
-# # (DEBUGGING)
-# if __name__ == "__main__":
-#     print(os.getenv("GITHUB_TOKEN"))
-#     print(os.getenv("OPENAI_API_KEY"))
-#     utils.setup()
-#     # paste url:
-#     # "https://github.com/chiyeon/tmf-beat")
-#     author, repo_name = utils.get_repo_info(
-#         "https://github.com/Jingzhi-Su/PokerBot")
-#     print(author, repo_name)
-#     generateDataFile(author, repo_name, branch="main")
-#     allNames = generateFileNames()
-#     print(generateDescriptions(allNames))
-#     os.remove(storeFileName)
+# (DEBUGGING)
+if __name__ == "__main__":
+    print(os.getenv("GITHUB_TOKEN"))
+    print(os.getenv("OPENAI_API_KEY"))
+    utils.setup()
+    # paste url:
+    # "https://github.com/chiyeon/tmf-beat")
+    author, repo_name = utils.get_repo_info(
+        "https://github.com/Jingzhi-Su/PokerBot")
+    print(author, repo_name)
+    generateDataFile(author, repo_name, branch="main")
+    allNames = generateFileNames()
+    print(generateDescriptions(allNames))
+    os.remove(storeFileName)
