@@ -6,7 +6,7 @@
 <nav>
 	<div class="container mx-auto p-2 flex justify-between items-center max-w-3xl md:mt-16">
 		<div id="logo-wrap">
-			<a href="." class="text-xl font-bold" id="logo">3LM</a>
+			<a href="." class="text-xl font-bold" id="logo">aetheon</a>
 		</div>
 		<ul class="space-x-4">
 			{#each options as option (option)}

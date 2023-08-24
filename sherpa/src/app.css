@@ -53,7 +53,7 @@ h3 {
 	letter-spacing: -3px;
 	/* STRETCHING */
 	display: inline-block;
-	@apply origin-top-left scale-x-150;
+	@apply origin-top-left scale-x-125;
 }
 
 /* DEBUG */
