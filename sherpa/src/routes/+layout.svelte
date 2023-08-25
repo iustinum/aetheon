@@ -4,7 +4,7 @@
 </script>
 
 <nav>
-	<div class="container mx-auto p-2 flex justify-between items-center max-w-3xl md:mt-16">
+	<div class="container mx-auto p-2 flex justify-between items-center  max-w-3xl md:mt-2 sticky top-0">
 		<div id="logo-wrap">
 			<a href="." class="text-xl font-bold" id="logo">aetheon</a>
 		</div>
