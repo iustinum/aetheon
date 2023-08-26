@@ -6,7 +6,7 @@
 	];
 </script>
 
-<div class="content-container text-content bg-gray-400 rounded">
+<div class="page text-content bg-gray-400 rounded">
 	<h1 class="text-center">WAITLIST</h1>
 
 	<form action="subscribe" method="post">
@@ -22,7 +22,7 @@
 	</form>
 </div>
 
-<div class="content-container text-content">
+<div class="page text-content">
 	<h1>q&a !!</h1>
 	<br class="block" />
 

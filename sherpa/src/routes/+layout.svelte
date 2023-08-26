@@ -1,16 +1,27 @@
 <script>
 	import '../app.css';
-	const options = ['blog', 'q&a', 'waitlist'];
+	// const options = {
+	// 	"blog": 'asdf',
+	// 	'q&a': 'asdf',
+	// 	"waitlist": 'asdf'
+	// };
+	const links = [
+		{ name: 'blog', link: '/blog' },
+		{ name: 'q&a', link: '/#q&a' },
+		{ name: 'waitlist', link: '/#waitlist' }
+	];
 </script>
 
-<nav>
-	<div class="container mx-auto p-2 flex justify-between items-center  max-w-3xl md:mt-2 sticky top-0">
+<nav class="sticky top-0 z-50">
+	<div
+		class="container mx-auto p-2 flex justify-between items-center max-w-3xl md:mt-2"
+	>
 		<div id="logo-wrap">
 			<a href="." class="text-xl font-bold" id="logo">aetheon</a>
 		</div>
 		<ul class="space-x-4">
-			{#each options as option (option)}
-				<li class="inline-block"><a href={option}>{option}</a></li>
+			{#each links as { name, link } (name)}
+				<li class="inline-block"><a href={link}>{name}</a></li>
 			{/each}
 		</ul>
 	</div>
@@ -28,7 +39,7 @@
 		src: url('/fonts/ariblk.ttf');
 	}
 
-  @font-face {
+	@font-face {
 		font-family: 'Gresa';
 		src: url('/fonts/GresaRegular.ttf');
 	}

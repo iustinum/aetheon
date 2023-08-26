@@ -9,15 +9,15 @@
 
 /* CONTAINERS: */
 
-.content-container {
-	@apply w-full p-4 sm:p-6 max-w-3xl;
+.page {
+	@apply w-full p-4 sm:p-6 max-w-3xl h-screen;
 }
 
 .text-content {
 	@apply md:mt-16 mt-8;
 }
 
-.content-container > *,
+.page > *,
 .text-content > * {
 	@apply mb-4;
 }
