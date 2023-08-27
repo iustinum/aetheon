@@ -14,7 +14,11 @@ export default {
 				accent: {
 					900: '#164E63'
 				}
-			}
+			},
+			spacing: {
+				'90vh': '88vh',
+				'94vh': '94vh',
+			  }
 		}
 	},
 	plugins: []

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Cypro+Minoan&family=Space+Grotesk:wght@700&display=swap');
+
+@font-face {
+    font-family: 'Arial Black';
+    src: url('/fonts/ariblk.ttf');
+}
+
+/* ISO v0.6: */
+
+@font-face {
+    font-family: 'ISO v0.6';
+    src: url('/fonts/ISO/ISOv06-Medium.eot');
+    src: local('ISO v0.6 Medium'), local('ISOv0.6-Medium'),
+        url('/fonts/ISO/ISOv06-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/ISO/ISOv06-Medium.woff2') format('woff2'),
+        url('/fonts/ISO/ISOv06-Medium.woff') format('woff'),
+        url('/fonts/ISO/ISOv06-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ISO v0.6';
+    src: url('/fonts/ISO/ISOv06-Light.eot');
+    src: local('ISO v0.6 Light'), local('ISOv0.6-Light'),
+        url('/fonts/ISO/ISOv06-Light.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/ISO/ISOv06-Light.woff2') format('woff2'),
+        url('/fonts/ISO/ISOv06-Light.woff') format('woff'),
+        url('/fonts/ISO/ISOv06-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ISO v0.6';
+    src: url('/fonts/ISO/ISOv06-Bold.eot');
+    src: local('ISO v0.6 Bold'), local('ISOv0.6-Bold'),
+        url('/fonts/ISO/ISOv06-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/ISO/ISOv06-Bold.woff2') format('woff2'),
+        url('/fonts/ISO/ISOv06-Bold.woff') format('woff'),
+        url('/fonts/ISO/ISOv06-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ISO v0.6';
+    src: url('/fonts/ISO/ISOv06-Regular.eot');
+    src: local('ISO v0.6 Regular'), local('ISOv0.6-Regular'),
+        url('/fonts/ISO/ISOv06-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/ISO/ISOv06-Regular.woff2') format('woff2'),
+        url('/fonts/ISO/ISOv06-Regular.woff') format('woff'),
+        url('/fonts/ISO/ISOv06-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ISO v0.6';
+    src: url('/fonts/ISO/ISOv06-Black.eot');
+    src: local('ISO v0.6 Black'), local('ISOv0.6-Black'),
+        url('/fonts/ISO/ISOv06-Black.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/ISO/ISOv06-Black.woff2') format('woff2'),
+        url('/fonts/ISO/ISOv06-Black.woff') format('woff'),
+        url('/fonts/ISO/ISOv06-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ISO v0.6';
+    src: url('/fonts/ISO/ISOv06-Thin.eot');
+    src: local('ISO v0.6 Thin'), local('ISOv0.6-Thin'),
+        url('/fonts/ISO/ISOv06-Thin.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/ISO/ISOv06-Thin.woff2') format('woff2'),
+        url('/fonts/ISO/ISOv06-Thin.woff') format('woff'),
+        url('/fonts/ISO/ISOv06-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
