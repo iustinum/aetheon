@@ -1,5 +1,36 @@
 <script>
 	let codeInput = '';
+	let codeOutput = "";
+
+	async function changeOutput() {
+
+		const data = { codeInput };
+
+		// Make the POST request
+		try {
+			const response = await fetch('http://127.0.0.1:8080/prompt', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(data)
+			});
+
+			if (response.ok) {
+				console.log('POST request successful', response);
+				// Reset the input after successful submission
+				response.json().then((data) => {
+					codeOutput =  JSON.stringify(data)}
+				)
+			} else {
+				console.error('POST request failed');
+				codeOutput = "something went wrong";
+
+			}
+		} catch (error) {
+			console.error('Error sending POST request:', error);
+		}
+	}
 </script>
 
 <div class="page text-content h-90vh">
@@ -13,11 +44,9 @@
 		placeholder="Write your code here..."
 	/>
 
-	<button>Document</button>
+	<button on:click={changeOutput}>Document</button>
 
-	<div class="output">asdf</div>
-	<!-- <div class="code-container">
-	</div> -->
+	<div class="output" >{codeOutput}</div>
 </div>
 
 <style>
