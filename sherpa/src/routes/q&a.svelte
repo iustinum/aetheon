@@ -7,7 +7,7 @@
 </script>
 
 <div class="page text-content">
-	<h1>q&a !!</h1>
+	<h1>Q&A</h1>
 	<br class="block" />
 
 	{#each questions as { q, a }, i (i)}

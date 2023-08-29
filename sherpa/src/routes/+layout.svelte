@@ -13,8 +13,8 @@
 	const pages = {
 		"home": Home,
 		"demo": Demo,
-		"q&a": QAndA,
 		"waitlist": Waitlist,
+		"q&a": QAndA,
 	}
 
 	setContext("pages", pages)
@@ -22,10 +22,10 @@
 
 
 	const links = [
-		{ name: 'blog', link: '/blog' },
+		// { name: 'blog', link: '/blog' },
 		{ name: 'demo', link: '/#demo' },
+		{ name: 'waitlist', link: '/#waitlist' },
 		{ name: 'q&a', link: '/#q&a' },
-		{ name: 'waitlist', link: '/#waitlist' }
 	];
 
 
@@ -35,6 +35,8 @@
 	<div class="container mx-auto p-2 flex justify-between items-center max-w-3xl md:mt-2 md:px-0">
 		<div id="logo-wrap">
 			<a href="." class="text-xl font-bold" id="logo">aetheon</a>
+			<span>&nbsp&nbsp</span>
+			<a href="/blog">blog</a>
 		</div>
 		<ul class="space-x-4">
 			{#each links as { name, link } (name)}

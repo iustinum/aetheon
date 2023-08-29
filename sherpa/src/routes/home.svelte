@@ -15,6 +15,6 @@
 	</p>
 	<p>
 		We are building a tool that will clean up existing code bases, as well as streamline the
-		creation of new ones. Try it out a toy demo <a href="submit" class="url">below</a>.
+		creation of new ones. Try it out a toy demo <a href="#demo" class="url">below</a>.
 	</p>
 </div>
