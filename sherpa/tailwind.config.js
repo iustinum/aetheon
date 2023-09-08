@@ -16,7 +16,8 @@ export default {
 				}
 			},
 			spacing: {
-				'90vh': '88vh',
+				'10vh': '3vh',
+				'90vh': '90vh',
 				'94vh': '94vh',
 			  }
 		}

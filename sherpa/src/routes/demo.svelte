@@ -59,6 +59,6 @@
 		line-height: 1.5;
 		border: none;
 		width: 100%;
-		height: 40%;
+		height: 20%;
 	}
 </style>

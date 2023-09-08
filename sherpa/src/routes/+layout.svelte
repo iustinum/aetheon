@@ -31,8 +31,8 @@
 
 </script>
 
-<nav class="sticky top-0 z-50 bg-gray-800">
-	<div class="container mx-auto p-2 flex justify-between items-center max-w-3xl md:mt-2 md:px-0">
+<nav class="sticky top-0 z-50 bg-neutral-800 ">
+	<div class="container mx-auto p-2 flex justify-between items-center max-w-3xl md:mt-10vh md:px-0">
 		<div id="logo-wrap">
 			<a href="." class="text-xl font-bold" id="logo">aetheon</a>
 			<span>&nbsp&nbsp</span>
@@ -53,8 +53,8 @@
 <footer class="max-w-3xl w-full mx-auto md:py-8">
 	<br class="block" />
 	<br class="block" />
-	<hr class=" my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-	<span class="block text-sm text-gray-400 sm:text-center dark:text-gray-400"
+	<hr class=" my-6 border-neutral-200 sm:mx-auto dark:border-neutral-700 lg:my-8" />
+	<span class="block text-sm text-neutral-400 sm:text-center dark:text-neutral-400"
 		>© 2023 Aetheon. All Rights Reserved.</span
 	>
 </footer>

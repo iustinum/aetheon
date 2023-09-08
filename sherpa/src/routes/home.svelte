@@ -1,10 +1,17 @@
 <div class="page h-94vh md:h-90vh md:mt-8">
-	<div class="relative">
+	<!-- <div class="relative">
 		<img class=" w-full h-72 object-cover" src="./banner2.jpeg" alt="asdf" />
 		<div class="absolute inset-0 flex items-center justify-center">
-			<h1 class="text-7xl font-bold">Cleaner Code</h1>
 		</div>
+	</div> -->
+	<div class="h-40">
+
 	</div>
+		<h1 class="text-7xl font-bold">Cleaner Code</h1>
+		<div class="h-20">
+	
+		</div>
+		
 	<br class="block" />
 
 	<h1 class="text-3xl font-bold">Make Code Readable & Digestable</h1>

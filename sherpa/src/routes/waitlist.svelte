@@ -31,21 +31,21 @@
 
 
 <div>
-	<div class="md:my-16 my-8 p-4 space-y-4 bg-gray-400">
+	<div class="md:my-16 my-8 p-4 space-y-4 bg-neutral-400">
 		<h1 class="text-center">Interested?</h1>
 		<p>Subscribe if you want to become a tester, or if your just interested!</p>
 
 		<form on:submit|preventDefault={handleSubmitSubscribe} class="text-center">
 			<label>
 				<input
-					class="text-gray-800 focus:border-none px-1"
+					class="text-neutral-800 focus:border-none px-1"
 					name="input1"
 					type="email"
 					placeholder="email@domain.com"
 					bind:value={email}
 				/>
 			</label>
-			<button class="bg-gray-700 px-2">Join</button>
+			<button class="bg-neutral-700 px-2">Join</button>
 		</form>
 	</div>
 </div>

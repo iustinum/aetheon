@@ -6,7 +6,7 @@
 
 :root {
 	font-family: 'ISO v0.6', Helvetica, sans-serif;
-	@apply bg-gray-800 text-gray-200;
+	@apply bg-neutral-800 text-neutral-200;
 	scroll-behavior: smooth;
 }
 
@@ -32,7 +32,7 @@
 /* OVERRIDE DEFAULTS: */
 
 a {
-	@apply hover:text-gray-400;
+	@apply hover:text-neutral-400;
 }
 
 .url {
@@ -41,7 +41,7 @@ a {
 
 h1,
 h3 {
-	font-family: 'ISO v0.6', 'Space Grotesk', monospace;
+	font-family: 'Space Grotesk', monospace;
 }
 
 h1 {
